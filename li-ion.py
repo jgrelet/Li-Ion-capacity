@@ -158,13 +158,13 @@ while True:     # Event Loop
     #print(event, values)
     if event is None:
         break
-    if event is 'Quit' or event == None:
+    if event == 'Quit' or event == None:
         raise SystemExit("Cancelling: user exit")
-    if event is '_TYPE_':
+    if event == '_TYPE_':
         window.Element('_MODEL_').Update(value=type[values['_TYPE_']])
         window.Element('_INPUT_').Update(value='')
         window.Element('_RESULT_').Update(value='')
-    if event is '_INPUT_':
+    if event == '_INPUT_':
         if values['_INPUT_'] == '':
             continue
         if values['_TYPE_'] == '10S3P':
