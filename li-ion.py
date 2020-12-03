@@ -135,8 +135,12 @@ charge['13S2P'] = np.array([
     0.0])
 
 
+# default value
+V = tension['10S3P']
+
 layout = [[sg.T(type['10S3P'], key='_MODEL_', visible=None), sg.Text('Select the batterie'),
-           sg.InputCombo(['10S3P', '13S2P', '12S2P'], key='_TYPE_', change_submits=True, size=(6, 1))],
+           sg.InputCombo(['10S3P', '13S2P', '12S2P'], key='_TYPE_', default_value ='10S3P', 
+                                        change_submits=True, size=(6, 1))],
           [sg.T('Enter voltage'), sg.In(key='_INPUT_',
                                         size=(8, 1), change_submits=True)],
           #        [sg.T('', key='_TENSION_', visible=False), sg.T('Capacity'), sg.In(key='_RESULT_', size=(8,1))],
