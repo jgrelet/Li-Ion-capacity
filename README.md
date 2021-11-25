@@ -59,3 +59,7 @@ conda env update --prefix ./li-ion --file environment-linux.yml --prune
 ```sh
 conda env remove --name <env>
 ```
+
+## Main view
+
+![main window](images/main_window.jpg)
