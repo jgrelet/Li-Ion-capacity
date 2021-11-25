@@ -1,0 +1,5 @@
+VERSION = "0.2"
+GUI = "Tkinter"
+NAME    = "Li-ion capacity"
+APPNAME = "li-ion"
+AUTHOR = "IRD"

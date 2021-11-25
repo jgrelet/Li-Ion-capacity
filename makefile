@@ -13,9 +13,13 @@ clean-pyc:
 	find . -name '*.pyo' -exec rm --force {} +
 	
 clean-build:
-	rm --force --recursive build/
-	rm --force --recursive dist/
-	rm --force --recursive __pycache__/
+ifeq ($(OS),Windows_NT) 
+		del /Q build dist __pycache__
+else
+		rm --force --recursive build/
+		rm --force --recursive dist/
+		rm --force --recursive __pycache__/
+endif
 
 lint:
 	$(PYLINT) --exclude=.tox
@@ -27,7 +31,7 @@ run:
 	$(PYTHON) $(MAIN)
 
 build:
-	pyinstaller -wF $(MAIN)
+	pyinstaller -wF -c --clean $(MAIN)
 
 runc:
 	dist/$(PROJECT)

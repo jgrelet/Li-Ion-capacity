@@ -1,0 +1,26 @@
+name: li-ion
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - appdirs=1.4.4
+  - ca-certificates=2021.10.8
+  - certifi=2021.10.8
+  - intel-openmp=2021.4.0
+  - libblas=3.9.0
+  - libcblas=3.9.0
+  - liblapack=3.9.0
+  - mkl=2021.4.0
+  - numpy=1.21.4
+  - openssl=1.1.1l
+  - pip=21.2.4
+  - pysimplegui=4.55.1
+  - python=3.9.7
+  - python_abi=3.9
+  - setuptools=58.0.4
+  - sqlite=3.36.0
+  - tbb=2021.4.0
+  - toml=0.10.2
+  - tzdata=2021e
+  - wheel=0.37.0
+prefix: C:\Users\jgrelet.IRD-US191-JGF2\miniconda3\envs\li-ion
