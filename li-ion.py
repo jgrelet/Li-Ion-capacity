@@ -233,7 +233,7 @@ layout = [[sg.T(type['10S3P'], key='_MODEL_', visible=None), sg.Text('Select the
           [sg.T('Capacity'), sg.In(key='_RESULT_', size=(8, 1))],
           [sg.CloseButton('Quit')]]
 
-window = sg.Window('Li-Ion capacity calculator',
+window = sg.Window(f'Li-Ion capacity calculator v{VERSION} with {GUI}',
                    auto_size_text=False,
                    default_element_size=(22, 1),
                    text_justification='right',
@@ -246,6 +246,7 @@ while True:     # Event Loop
         break
     if event == 'Quit' or event == None:
         # print(cfg['type'])
+        print('quit')
         saveConfig()
         raise SystemExit("Cancelling: user exit")
     if event == '_TYPE_':
@@ -292,4 +293,5 @@ while True:     # Event Loop
 
 
 # print(cfg['type'])
+print('end')
 saveConfig()
