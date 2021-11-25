@@ -3,7 +3,7 @@
 This program calculates the capacity in percentage from the voltage measured at the terminals
 of Lithium-Ion battery pack from the manufacturer Williamson.
 
-The models WILPA2210 (13S2P), WILPA2475 (10S3P) and WILPA2554 (12S2P) use SAFT cells, 
+The models WILPA2210 (13S2P), WILPA2475 (10S3P) and WILPA2554 (12S2P) use SAFT cells,
 model MP176065 with nominal voltage 3.75V, load 4.2V and cutoff 2.5V,
 with a life cycle of about 600 loads.
 The more recent MP176065 xlr cell, has a slightly lower nominal voltage of 3.65V, load 4.2V and cutoff 2.5V, but with a higher life cycle of about 1800 charges.
