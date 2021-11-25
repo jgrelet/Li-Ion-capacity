@@ -208,7 +208,7 @@ def saveConfig():
 
 # start main program
 cfg_dir = AppDirs(APPNAME, AUTHOR).user_config_dir
-print(cfg_dir)
+# print(cfg_dir)
 if not path.exists(cfg_dir):
     makedirs(cfg_dir)
 cfg_file = Path(path.expandvars(
@@ -231,7 +231,7 @@ layout = [[sg.T(type['10S3P'], key='_MODEL_', visible=None), sg.Text('Select the
                                         size=(8, 1), change_submits=True)],
           #        [sg.T('', key='_TENSION_', visible=False), sg.T('Capacity'), sg.In(key='_RESULT_', size=(8,1))],
           [sg.T('Capacity'), sg.In(key='_RESULT_', size=(8, 1))],
-          [sg.CloseButton('Quit')]]
+          [sg.Button('Exit', key='Exit')]]
 
 window = sg.Window(f'Li-Ion capacity calculator v{VERSION} with {GUI}',
                    auto_size_text=False,
@@ -244,11 +244,8 @@ while True:     # Event Loop
     #print(event, values)
     if event is None:
         break
-    if event == 'Quit' or event == None:
-        # print(cfg['type'])
-        print('quit')
-        saveConfig()
-        raise SystemExit("Cancelling: user exit")
+    if event in ('Exit', sg.WIN_CLOSED):
+        break  #  leave main loop
     if event == '_TYPE_':
         cfg['type'] = values['_TYPE_']
         window.Element('_MODEL_').Update(value=type[values['_TYPE_']])
@@ -293,5 +290,6 @@ while True:     # Event Loop
 
 
 # print(cfg['type'])
-print('end')
+# print('end')
 saveConfig()
+window.close()
