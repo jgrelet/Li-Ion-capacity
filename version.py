@@ -1,4 +1,4 @@
-VERSION = "0.21"
+VERSION = "1.01"
 GUI = "Tkinter"
 NAME    = "Li-ion capacity"
 APPNAME = "li-ion"
