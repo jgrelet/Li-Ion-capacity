@@ -23,4 +23,4 @@ install:
 
 
 script:
-  - make run
+  - make build
