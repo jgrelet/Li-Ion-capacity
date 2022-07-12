@@ -1,4 +1,4 @@
-# Li-ion capacity
+# Li-ion capacity [![Build Status](https://travis-ci.com/jgrelet/Li-Ion-capacity.svg?branch=master)](https://app.travis-ci.com/github/jgrelet/Li-Ion-capacity)
 
 This program calculates the capacity in percentage from the voltage measured at the terminals
 of Lithium-Ion battery pack from the manufacturer Williamson.
@@ -60,6 +60,20 @@ conda env update --prefix ./li-ion --file environment-linux.yml --prune
 conda env remove --name <env>
 ```
 
+## Using
+
+```sh
+make run
+```
+
+
 ## Main view
 
 ![main window](images/main_window.jpg)
+
+## Using compiled version
+
+```sh
+make build
+make runc
+```
